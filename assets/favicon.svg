@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#00ffc3"/>
+      <stop offset="1" stop-color="#00b3ff"/>
+    </linearGradient>
+    <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Rounded square -->
+  <rect x="8" y="8" width="112" height="112" rx="20" ry="20" fill="url(#g1)" opacity="0.2" filter="url(#f1)"/>
+  <rect x="16" y="16" width="96" height="96" rx="16" ry="16" fill="none" stroke="url(#g1)" stroke-width="6"/>
+
+  <!-- Play icon -->
+  <polygon points="48,40 80,64 48,88" fill="url(#g1)"/>
+</svg>

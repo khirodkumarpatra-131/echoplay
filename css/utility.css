@@ -1,0 +1,71 @@
+.border{
+    border: 2px solid red;
+    margin: 3px ;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.item-center{
+    align-items: center;
+}
+.bgblack{
+    background-color: black;
+    color: white;
+}
+.bggray{
+    background-color: hsl(0deg 0% 7.06%);
+}
+.rounded{
+    border-radius:7px ;
+}
+.m-1{
+    margin: 5px;
+}
+.p-1{
+    padding: 10px;
+}
+
+:root{
+  --scrollbar-track: #1b1b1b;    /* track (background) */
+  --scrollbar-thumb: #2f2f2f;    /* thumb normal */
+  --scrollbar-thumb-hover: #4a4a4a; /* thumb on hover */
+  --scrollbar-thumb-active: #666; /* thumb when active/dragging */
+  --scrollbar-radius: 8px;
+  --scrollbar-width: 12px;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);   /* for horizontal scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: var(--scrollbar-radius);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-radius);
+  border: 2px solid transparent; /* gives space around thumb */
+  background-clip: padding-box;
+  min-height: 24px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: var(--scrollbar-thumb-active);
+}
+
+/* Firefox: use scrollbar-color + width (limited control) */
+html {
+  scrollbar-width: thin; /* auto | thin | none */
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}

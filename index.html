@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/utility.css">
+    <title>EchoPlay - Your Music, Your Vibe</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <div class="container flex bgblack">
+        <!-- Sidebar -->
+        <div class="left">
+            <div class="close">
+                <img src="assets/close.svg" width="30px" class="invert" alt="">
+            </div>
+            <div class="home bggray rounded m-1 p-1">
+                <div class="logo">
+                    <img width="280px" src="assets/echo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li><img class="invert" src="assets/home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="assets/search.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+
+            <div class="library bggray rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="assets/playlist.svg" alt="">
+                    <h2>your library</h2>
+                </div>
+                <div class="songlist">
+                    <ul></ul>
+                </div>
+                <div class="footer">
+                    <div><a href="#"><span>Legal</span></a></div>
+                    <div><a href="#"><span>Privacy</span></a></div>
+                    <div><a href="#"><span>Privacy Policy</span></a></div>
+                    <div><a href="#"><span>Cookies</span></a></div>
+                    <div><a href="#"><span>About Ads</span></a></div>
+                    <div><a href="#"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="right bggray rounded">
+            <div class="header">
+                <div class="nav">
+                    <div class="hamburgercontainer">
+                        <img class="invert hamburger" width="30px" src="assets/hamburger.svg" alt="">
+                    </div>
+                </div>
+
+                <!-- Updated Buttons -->
+                <div class="buttons">
+                    <a href=""><button class="signupbtn">Sign up</button></a>
+                    <a href=""><button class="loginbtn">Log in</button></a>
+                </div>
+            </div>
+
+            <!-- Playlist Cards -->
+            <div class="spotyfyplaylist">
+                <h1>Echo Chill Zone</h1>
+                <div class="cardcontainer">
+                    <div data-folder="cs" class="card">
+                        <div class="play">
+                            <div class="circle-icon">
+                                <svg viewBox="0 0 100 100" class="inner-icon" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="40,30 70,50 40,70" fill="black" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="assets/thumbnail1.jpg" alt="">
+                        <h5>Happy Hits</h5>
+                        <p>Oorum Blood - From no Dude</p>
+                    </div>
+                    <div data-folder="ncs" class="card">
+                        <div class="play">
+                            <div class="circle-icon">
+                                <svg viewBox="0 0 100 100" class="inner-icon" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="40,30 70,50 40,70" fill="black" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img src="assets/thumbnail2.jpg" alt="">
+                        <h5>NCS Hits</h5>
+                        <p>Various Artists - NCS</p>
+                    </div>
+                </div>
+
+                <!-- Playbar -->
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="abovebar">
+                        <div class="songinfo"></div>
+                        <div class="songbuttons">
+                            <img width="35px" id="previous" src="assets/prevsong.svg" alt="">
+                            <img width="35px" id="play" src="assets/play.svg" alt="">
+                            <img width="35px" id="next" src="assets/nextsong.svg" alt="">
+                        </div>
+                        <div class="timevol">
+                            <div class="songtime"></div>
+                            <div class="volume">
+                                <img width="25px" src="assets/volume.svg" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

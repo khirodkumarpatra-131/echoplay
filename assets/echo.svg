@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="800" height="220" role="img" aria-label="EchoPlay logo - neon">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#00ffc3"/>
+      <stop offset="1" stop-color="#00b3ff"/>
+    </linearGradient>
+    <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- glowing rounded rectangle -->
+  <rect x="20" y="20" rx="28" ry="28" width="160" height="160" fill="url(#g1)" opacity="0.18" filter="url(#f1)"/>
+  <rect x="30" y="30" rx="20" ry="20" width="140" height="140" fill="none" stroke="url(#g1)" stroke-width="6"/>
+
+  <!-- bigger centered play icon -->
+  <polygon points="90,70 135,100 90,130" fill="url(#g1)" />
+
+  <!-- Bold wordmark with glow -->
+  <g transform="translate(220,140)">
+    <text x="0" y="0" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="72" fill="#e8faff" style="paint-order: stroke fill;">
+      Echo
+    </text>
+    <text x="200" y="0" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="72" fill="url(#g1)">
+      Play
+    </text>
+  </g>
+</svg>
