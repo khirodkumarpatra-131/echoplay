@@ -434,6 +434,7 @@ body {
 
     .card {
         width: 45vw;
+        font-size: 19px;
     }
 
     .cardcontainer {
@@ -588,5 +589,6 @@ body {
         height: 100vh;
         padding: 20px 10px;
     }
+
 
 }
