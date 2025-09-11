@@ -566,6 +566,11 @@ body {
     .form-page button {
         font-size: 16px;
     }
+        .card {
+        margin: 0px;
+        width: 84vw;
+        font-size: 19px;
+    }
 }
 
 @media (min-width: 710px) and (max-width: 1300px) {
@@ -592,5 +597,6 @@ body {
 
 
 }
+
 
 
