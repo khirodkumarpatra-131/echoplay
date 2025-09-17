@@ -1,123 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/utility.css">
-    <title>EchoPlay - Your Music, Your Vibe</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/utility.css">
+  <title>EchoPlay - Your Music, Your Vibe</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <style>
+    .buttons,
+    .userbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .userbox span {
+      font-weight: bold;
+      color: #1DB954;
+    }
+
+    .userbox button {
+          padding: 7px 18px;
+      border: none;
+      border-radius: 6px;
+      background: #1DB954;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .userbox button:hover {
+      background: #17a94d;
+    }
+
+    /* Search field animation */
+    .search-container {
+      display: none;
+      margin-top: 10px;
+      transition: all 0.4s ease;
+    }
+
+    .search-container.active {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .search-container input {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      /* light border */
+      background: rgba(255, 255, 255, 0.1);
+      /* transparent background */
+      color: white;
+      /* text color */
+      width: 368px;
+      height: 44px;
+      font-size: 19px;
+      transition: all 0.3s ease;
+    }
+
+    .search-container input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+      /* placeholder color */
+    }
+
+  #searchGo {
+    width: 80px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1DB954; /* flat green */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#searchGo:hover {
+    background-color: #17a94d; /* slightly darker green on hover */
+    transform: translateY(-1px); /* subtle lift */
+}
+
+
+    /* Blink effect */
+    .blink {
+      animation: blinkEffect 0.6s infinite alternate;
+    }
+
+    @keyframes blinkEffect {
+      from {
+        background-color: rgba(255, 255, 0, 0.3);
+      }
+
+      to {
+        background-color: transparent;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container flex bgblack">
-        <!-- Sidebar -->
-        <div class="left">
-            <div class="close">
-                <img src="assets/close.svg" width="30px" class="invert" alt="">
-            </div>
-            <div class="home bggray rounded m-1 p-1">
-                <div class="logo">
-                    <img width="280px" src="assets/echo.svg" alt="logo">
-                </div>
-                <ul>
-                    <li><img class="invert" src="assets/home.svg" alt="Home">Home</li>
-                    <li><img class="invert" src="assets/search.svg" alt="Search">Search</li>
-                </ul>
-            </div>
-
-            <div class="library bggray rounded m-1 p-1">
-                <div class="heading">
-                    <img class="invert" src="assets/playlist.svg" alt="">
-                    <h2>your library</h2>
-                </div>
-                <div class="songlist">
-                    <ul></ul>
-                </div>
-                <div class="footer">
-                    <div><a href="#"><span>Legal</span></a></div>
-                    <div><a href="#"><span>Privacy</span></a></div>
-                    <div><a href="#"><span>Privacy Policy</span></a></div>
-                    <div><a href="#"><span>Cookies</span></a></div>
-                    <div><a href="#"><span>About Ads</span></a></div>
-                    <div><a href="#"><span>Accessibility</span></a></div>
-                </div>
-            </div>
+  <div class="container flex bgblack">
+    <!-- Sidebar -->
+    <div class="left">
+      <div class="close">
+        <img src="assets/close.svg" width="30px" class="invert" alt="">
+      </div>
+      <div class="home bggray rounded m-1 p-1">
+        <div class="logo">
+          <img width="280px" src="assets/echo.svg" alt="logo">
         </div>
-
-        <!-- Main Content -->
-        <div class="right bggray rounded">
-            <div class="header">
-                <div class="nav">
-                    <div class="hamburgercontainer">
-                        <img class="invert hamburger" width="30px" src="assets/hamburger.svg" alt="">
-                    </div>
-                </div>
-
-                <!-- Updated Buttons -->
-                <div class="buttons">
-                    <a href=""><button class="signupbtn">Sign up</button></a>
-                    <a href=""><button class="loginbtn">Log in</button></a>
-                </div>
-            </div>
-
-            <!-- Playlist Cards -->
-            <div class="spotyfyplaylist">
-                <h1>Echo Chill Zone</h1>
-                <div class="cardcontainer">
-                    <div data-folder="cs" class="card">
-                        <div class="play">
-                            <div class="circle-icon">
-                                <svg viewBox="0 0 100 100" class="inner-icon" xmlns="http://www.w3.org/2000/svg">
-                                    <polygon points="40,30 70,50 40,70" fill="black" />
-                                </svg>
-                            </div>
-                        </div>
-                        <img src="assets/thumbnail1.jpg" alt="">
-                        <h5>Happy Hits</h5>
-                        <p>Oorum Blood - From no Dude</p>
-                    </div>
-                    <div data-folder="ncs" class="card">
-                        <div class="play">
-                            <div class="circle-icon">
-                                <svg viewBox="0 0 100 100" class="inner-icon" xmlns="http://www.w3.org/2000/svg">
-                                    <polygon points="40,30 70,50 40,70" fill="black" />
-                                </svg>
-                            </div>
-                        </div>
-                        <img src="assets/thumbnail2.jpg" alt="">
-                        <h5>NCS Hits</h5>
-                        <p>Various Artists - NCS</p>
-                    </div>
-                </div>
-
-                <!-- Playbar -->
-                <div class="playbar">
-                    <div class="seekbar">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="abovebar">
-                        <div class="songinfo"></div>
-                        <div class="songbuttons">
-                            <img width="35px" id="previous" src="assets/prevsong.svg" alt="">
-                            <img width="35px" id="play" src="assets/play.svg" alt="">
-                            <img width="35px" id="next" src="assets/nextsong.svg" alt="">
-                        </div>
-                        <div class="timevol">
-                            <div class="songtime"></div>
-                            <div class="volume">
-                                <img width="25px" src="assets/volume.svg" alt="">
-                                <div class="range">
-                                    <input type="range" name="volume" id="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <ul>
+          <li id="homeBtn"><img class="invert" src="assets/home.svg" alt="Home">Home</li>
+          <li id="searchIcon"><img class="invert" src="assets/search.svg" alt="Search">Search</li>
+        </ul>
+        <div class="search-container" id="searchContainer">
+          <input type="text" id="searchInput" placeholder="Search songs...">
+          <button id="searchGo">Go</button>
         </div>
+      </div>
+      <div class="library bggray rounded m-1 p-1">
+        <div class="heading">
+          <img class="invert" src="assets/playlist.svg" alt="">
+          <h2>your library</h2>
+        </div>
+        <div class="songlist">
+          <ul></ul>
+        </div>
+        <div class="footer">
+          <div><a href="#"><span>Legal</span></a></div>
+          <div><a href="#"><span>Privacy</span></a></div>
+          <div><a href="#"><span>Privacy Policy</span></a></div>
+          <div><a href="#"><span>Cookies</span></a></div>
+          <div><a href="#"><span>About Ads</span></a></div>
+          <div><a href="#"><span>Accessibility</span></a></div>
+        </div>
+      </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- Main Content -->
+    <div class="right bggray rounded">
+      <div class="header">
+        <div class="nav">
+          <div class="hamburgercontainer">
+            <img class="invert hamburger" width="30px" src="assets/hamburger.svg" alt="">
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="signupbtn">Sign up</button>
+          <button class="loginbtn">Log in</button>
+          <div class="userbox" style="display:none;"></div>
+        </div>
+      </div>
+      <div class="spotyfyplaylist">
+        <h1>Echo Chill Zone</h1>
+        <div class="cardcontainer"></div>
 
+        <!-- Playbar -->
+        <div class="playbar">
+          <div class="seekbar">
+            <div class="circle"></div>
+          </div>
+          <div class="abovebar">
+            <div class="songinfo"></div>
+            <div class="songbuttons">
+              <img width="35px" id="previous" src="assets/prevsong.svg" alt="">
+              <img width="35px" id="play" src="assets/play.svg" alt="">
+              <img width="35px" id="next" src="assets/nextsong.svg" alt="">
+            </div>
+            <div class="timevol">
+              <div class="songtime"></div>
+              <div class="volume">
+                <img width="25px" src="assets/volume.svg" alt="">
+                <div class="range"><input type="range" name="volume" id=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
