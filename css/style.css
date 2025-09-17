@@ -180,7 +180,8 @@ body {
 }
 
 .loginbtn {
-    background-color: white;
+    border: none;
+    background-color: #00E676;
     border-radius: 21px;
     color: black;
     font-weight: bold;
@@ -197,12 +198,13 @@ body {
 .playbar {
     position: fixed;
     background: #e2d9d9;
-    width: 70vw;
+    width: 73vw;
     padding: 12px;
     bottom: 46px;
     filter: invert(1);
     border-radius: 10px;
     min-height: 50px;
+
 }
 
 .songbuttons {
@@ -258,7 +260,7 @@ body {
 /* Seekbar */
 .seekbar {
     height: 6px;
-    width: 98%;
+    width: 99%;
     background: black;
     position: absolute;
     bottom: 0;
@@ -538,6 +540,7 @@ body {
     margin-top: 20px;
     font-size: 14px;
 }
+
 .seekbar {
     height: 6px;
     width: 98%;
@@ -550,6 +553,7 @@ body {
     left: 0px;
     bottom: 8px;
 }
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -576,11 +580,16 @@ body {
     .form-page button {
         font-size: 16px;
     }
+
+    .card {
+        margin-bottom: 36px;
+    }
 }
 
 @media (min-width: 710px) and (max-width: 1300px) {
     .card {
-        width: 22vw;
+        width: 25vw;
+        margin: 0;
     }
 
     .cardcontainer {
